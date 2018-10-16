@@ -13,6 +13,12 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+
+/* BUILD STEPS
+ *
+ * $ make xd75:yeoh
+ */
+
 #include "xd75.h"
 
 // Layer shorthand
@@ -37,15 +43,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* YEOH
  * .--------------------------------------------------------------------------------------------------------------------------------------.
- * | `      | 1      | 2      | 3      | 4      | 5      | 6      | PG UP  | 7      | 8      | 9      | 0      | -      | =      | BACKSP |
+ * | `      | 1      | 2      | 3      | 4      | 5      | 6      |        | 7      | 8      | 9      | 0      | -      | =      | BACKSP |
  * |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+-----------------|
- * | TAB    | Q      | W      | E      | R      | T      | {      | PG DN  | }      | Y      | U      | I      | O      | P      | \      |
+ * | TAB    | Q      | W      | E      | R      | T      | VOL-   | MUTE   | VOL+   | Y      | U      | I      | O      | P      | \      |
  * |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+-----------------+--------|
  * | ESC/CTR| A      | S      | D      | F      | G      | [      | DEL    | ]      | H      | J      | K      | L      | ;      | '      |
  * |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------------------------+--------|
- * | LSHIFT | Z      | X      | C      | V      | B      |        | UP     |        | N      | M      | ,      | .      | /      | RSHIFT |
+ * | LSHIFT | Z      | X      | C      | V      | B      | PREV   | PLAY   | NEXT   | N      | M      | ,      | .      | /      | RSHIFT |
  * |--------+--------+--------+--------+--------+-----------------+--------+--------+--------+--------+-----------------+--------+--------|
- * | LALT   |  MEH   |        | FN     | LGUI   | ENTER  | LEFT   | DOWN   | RIGHT  | SPACE  | RGUI   | FN     |        |        |        |
+ * | LALT   |  MEH   |        | FN     | LGUI   | ENTER  |        |        |        | SPACE  | RGUI   | FN     |        | CTRL   | ALT    |
  * '--------------------------------------------------------------------------------------------------------------------------------------'
  */
 
@@ -58,11 +64,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  // },
 
  [_QW] = { /* QWERTY */
-  { KC_GRV,           KC_1,    KC_2,    KC_3,    KC_4,   KC_5,   KC_6,    KC_PGUP,  KC_7,   KC_8,     KC_9,   KC_0,     KC_MINS, KC_EQL,  KC_BSPC },
-  { KC_TAB,           KC_Q,    KC_W,    KC_E,    KC_R,   KC_T,   KC_LCBR, KC_PGDN,  KC_RCBR, KC_Y,    KC_U,   KC_I,     KC_O,    KC_P,    KC_BSLS },
+  { KC_GRV,           KC_1,    KC_2,    KC_3,    KC_4,   KC_5,   KC_6,    KC_NO,  KC_7,   KC_8,     KC_9,   KC_0,     KC_MINS, KC_EQL,  KC_BSPC },
+  { KC_TAB,           KC_Q,    KC_W,    KC_E,    KC_R,   KC_T,   KC_VOLD, KC_MUTE, KC_VOLU, KC_Y,    KC_U,   KC_I,     KC_O,    KC_P,    KC_BSLS },
   { CTL_T(KC_ESCAPE), KC_A,    KC_S,    KC_D,    KC_F,   KC_G,   KC_LBRC, KC_DEL,   KC_RBRC, KC_H,    KC_J,   KC_K,     KC_L,    KC_SCLN, KC_QUOT  },
-  { KC_LSFT,          KC_Z,    KC_X,    KC_C,    KC_V,   KC_B,   KC_NO,   KC_UP,    KC_NO,   KC_N,    KC_M,   KC_COMM,  KC_DOT,  KC_SLSH, KC_RSFT },
-  { KC_LALT,          KC_MEH,  KC_NO,   MO(_FN), KC_LGUI, KC_ENT, KC_LEFT, KC_DOWN, KC_RGHT, KC_SPC,  KC_RGUI, MO(_FN), KC_NO,   KC_NO,   KC_NO },
+  { KC_LSFT,          KC_Z,    KC_X,    KC_C,    KC_V,   KC_B,   KC_MPRV, KC_MPLY,   KC_MNXT,   KC_N,    KC_M,   KC_COMM,  KC_DOT,  KC_SLSH, KC_RSFT },
+  { KC_LALT,          KC_MEH,  KC_NO,   MO(_FN), KC_LGUI, KC_ENT, KC_NO, KC_NO, KC_NO, KC_SPC,  KC_RGUI, MO(_FN), KC_NO,   KC_RCTL,   KC_RALT },
  },
 
 /* FUNCTION
