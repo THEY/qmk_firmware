@@ -87,9 +87,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* FUNCTION
  * .--------------------------------------------------------------------------------------------------------------------------------------.
- * |        |        |        |        |        |        |        | VOL+   |        |        |        |        |        |        |        |
+ * |RGB_on/f|RGB MODE|        |        |        |        |        | VOL+   |        |        |        |        |        |        |        |
  * |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
- * |        |        |        |        |        |        |        | VOL-   |        |        | SF+C+[ | SF+C+] |        |        |        |
+ * |RGB_UP  |RGB_DOWN|        |        |        |        |        | VOL-   |        |        | SF+C+[ | SF+C+] |        |        |        |
  * |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
  * |        |        |        |        |        |        |        | MUTE   |        |  LEFT  | DOWN   |  UP    |  RIGHT |        |        |
  * |--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------+--------|
@@ -109,8 +109,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // };
 
  [_FN] = { /* FUNCTION */
-  { KC_NO,   KC_NO,   KC_NO,   KC_NO,             KC_NO,              KC_NO,  KC_NO,   KC_VOLU,   KC_NO,   KC_NO,     KC_NO,   KC_NO,   KC_NO,  KC_NO,  KC_NO },
-  { KC_NO,   KC_NO,   KC_NO,   KC_NO,             KC_NO,              KC_NO,  KC_NO,   KC_VOLD,   KC_NO,   KC_NO,     LGUI(LSFT(KC_LBRACKET)), LGUI(LSFT(KC_RBRACKET)), KC_NO,  KC_NO,  KC_NO },
+  { RGB_TOG, RGB_MOD, KC_NO,   KC_NO,             KC_NO,              KC_NO,  KC_NO,   KC_VOLU,   KC_NO,   KC_NO,     KC_NO,   KC_NO,   KC_NO,  KC_NO,  KC_NO },
+  { RGB_VAI, RGB_VAD, KC_NO,   KC_NO,             KC_NO,              KC_NO,  KC_NO,   KC_VOLD,   KC_NO,   KC_NO,     LGUI(LSFT(KC_LBRACKET)), LGUI(LSFT(KC_RBRACKET)), KC_NO,  KC_NO,  KC_NO },
   { KC_NO,   KC_NO,   KC_NO,   KC_NO,             KC_NO,              KC_NO,  KC_NO,   KC_MUTE,   KC_NO,   KC_LEFT,   KC_DOWN,   KC_UP,   KC_RGHT,  KC_NO,  KC_NO },
   { KC_LSFT, KC_NO,   KC_NO,   LGUI(KC_LBRACKET), LGUI(KC_RBRACKET),  KC_NO,  KC_NO,   KC_NO,     KC_NO,   LGUI(KC_LEFT), LALT(KC_LEFT), LALT(KC_RIGHT), LGUI(KC_RIGHT), LGUI(KC_SLASH),  KC_NO },
   { RESET,   KC_NO,   KC_NO,   MO(_FN),           KC_NO,              KC_NO,  KC_MPRV, KC_MPLY,   KC_MNXT, KC_NO,     KC_NO,   MO(_FN),   KC_NO,  KC_NO,  KC_NO },
