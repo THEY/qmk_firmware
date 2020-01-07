@@ -18,6 +18,7 @@ enum custom_keycodes {
   ADJUST,
 };
 
+// TO UPDATE:
 // make keebio/viterbi/rev1:yeoh:avrdude
 
 
@@ -32,7 +33,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [_LOWER] = LAYOUT_ortho_5x14(
-    RGB_TOG, RGB_MOD,      KC_NO,        KC_NO,             KC_NO,              KC_NO,  KC_NO,   KC_NO,   KC_NO,         KC_NO,                   KC_NO,                   KC_NO,          KC_NO,           KC_NO,
+    RGB_TOG, RGB_MOD,      KC_NO,        KC_NO,             KC_NO,              KC_NO,  KC_NO,   KC_NO,   KC_NO,         KC_NO,                   KC_NO,                   KC_NO,          KC_NO,           KC_DEL,
     RGB_VAI, RGB_VAD,      KC_NO,        KC_NO,             KC_NO,              KC_NO,  KC_NO,   KC_NO,   KC_NO,         LGUI(LSFT(KC_LBRACKET)), LGUI(LSFT(KC_RBRACKET)), KC_NO,          KC_NO,           KC_NO,
     KC_NO,   KC_NO,        KC_NO,        LGUI(KC_LBRACKET), LGUI(KC_RBRACKET),  KC_NO,  KC_NO,   KC_NO,   KC_LEFT,       KC_DOWN,                 KC_UP,                   KC_RGHT,        KC_NO,           KC_NO,
     KC_LSFT, LGUI(KC_Z),   LGUI(KC_X),   LGUI(KC_C),        LGUI(KC_V),         KC_NO,  KC_NO,   KC_NO,   LGUI(KC_LEFT), LALT(KC_LEFT),           LALT(KC_RIGHT),          LGUI(KC_RIGHT), LGUI(KC_SLASH),  KC_NO,
